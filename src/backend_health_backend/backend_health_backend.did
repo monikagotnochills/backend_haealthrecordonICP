@@ -1,3 +1,12 @@
 service : {
-    "greet": (text) -> (text) query;
+  // Patient
+  "view_medical_history": (text) -> (text);
+  "get_test_results": (text) -> (text);
+  "schedule_appointment": (text, text) -> (bool);
+  "get_appointments": (text) -> (vec text);
+
+  // Doctor
+  "update_medical_record": (text, text, text) -> (bool);
+  "patient_management_dashboard": () -> (text);
+  "clinical_analytics": () -> (text);
 }
