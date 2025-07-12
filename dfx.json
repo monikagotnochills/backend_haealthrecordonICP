@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "backend_health_backend": {
+      "candid": "src/backend_health_backend/backend_health_backend.did",
+      "package": "backend_health_backend",
+      "type": "rust"
+    },
+    "backend_health_frontend": {
+      "dependencies": [
+        "backend_health_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/backend_health_frontend/src/index.html"
+      },
+      "source": [
+        "src/backend_health_frontend/assets",
+        "dist/backend_health_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
